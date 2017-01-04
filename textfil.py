@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import sys, os, subprocess, platform
 print('.     .       .  .   . .   .   . .    +  .')
 print('  .     .  :     .    .. :. .___---------___.')
@@ -14,14 +14,14 @@ print(' .   .     : . : .:.|. ######               #######::|')
 print('  :.. .  :-  : .:  ::|.#######           ..########:|')
 print(' .  .  .  ..  .  .. :\ ########          :######## :/')
 print('  .        .+ :: : -.:\ ########       . ########.:/')
-print('    .  .+   . . . . :.:\. #######       #######..:/')
+print('    .  .+   . . . . :.:  #######       #######..:/')
 print('      :: . . . . ::.:..:.\           .   .   ..:/')
 print('   .   .   .  .. :  -::::.\.       | |     . .:/')
 print('      .  :  .  .  .-:.":.::.\             ..:/')
 print(' .      -.   . . . .: .:::.:.\.           .:/')
 print('.   .   .  :      : ....::_:..:\   ___.  :/')
 print('   .   .  .   .:. .. .  .: :.:.:\       :/')
-print('     +   .   .   : . ::. :.:. .:.|\  .:/|')
+print('     +   .   .   : . ::. :.:. .:.  .:/|')
 print('     .         +   .  .  ...:: ..|  --.:|')
 print('.      . . .   .  .  . ... :..:.."(  ..)"')
 print(' .   .       .      :  .   .: ::/  .  .::\.')
@@ -31,10 +31,7 @@ inter_graf('_' *90);print('VERSION: 1.0 (((TEXTFIL)))       By: Edward Ramos    
 print('OS',platform.system(),platform.machine(),platform.node(),platform.platform());inter_graf('_' *90)
 print('OPTION   |                          DESCRIPTION(filters)\n')
 print('  1      -    cat  +Usado para mostrar o conteudo de arquivos, do inicio ao final: ')
-
-
 opcao = input('Digite uma opcao: ')
-
 if opcao == '1':
     print('cat [opcoes] arquivo')
     print('onde opcoes')
@@ -46,4 +43,11 @@ if opcao == '1':
         arquivo = str(input('Nome do arquivo: '))
         print(arquivo)
         os.system('cat -n {0}'.format(arquivo))
-        
+    if opcao2 == '2':
+        arquivo = str(input('Nome do arquivo: '))
+        print(arquivo)
+        os.system('cat -b {0}'.format(arquivo))
+    if opcao2 == '3':
+        arquivo = str(input('Nome do arquivo: '))
+        print(arquivo)
+        os.system('cat -A {0}'.format(arquivo))
